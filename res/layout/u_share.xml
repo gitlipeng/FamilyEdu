@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/edit_head_bg" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff0f6fd" >
+
+        <TextView
+            android:id="@+id/tvShareTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="@string/share_to"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20" />
+
+        <RelativeLayout
+            android:id="@+id/rlShareGrid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvShareTitle"
+            android:layout_marginTop="@dimen/dp15"
+            android:padding="@dimen/dp5" >
+
+            <GridView
+                android:id="@+id/gvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:horizontalSpacing="@dimen/padding"
+                android:numColumns="3"
+                android:verticalSpacing="@dimen/padding" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgShareTopLine"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line"
+            android:layout_below="@+id/rlShareGrid"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="#ffd4d5d5" />
+
+        <RelativeLayout
+            android:id="@+id/lyShareContent"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp4"
+            android:layout_below="@+id/imgShareTopLine"
+            android:background="#ffe8ecf0" />
+
+        <ImageView
+            android:id="@+id/imgShareBottomLine"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line"
+            android:layout_below="@+id/lyShareContent"
+            android:background="#ffd4d5d5" />
+
+        <RelativeLayout
+            android:id="@+id/rlShareCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgShareBottomLine"
+            android:background="@drawable/selector_share_cancel"
+            android:paddingBottom="@dimen/dp15"
+            android:paddingTop="@dimen/dp15" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

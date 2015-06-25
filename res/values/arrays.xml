@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="userlevel">
+        <item>初中</item>
+        <item>高中</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>博士</item>
+    </string-array>
+    <string-array name="silledclass">
+        <item>语文</item>
+        <item>数学</item>
+        <item>英语</item>
+        <item>生物</item>
+        <item>化学</item>
+    </string-array>
+    <string-array name="type">
+        <item>寻家教</item>
+        <item>寻家长</item>
+        <item>教育孩子</item>
+        <item>辅导经验</item>
+    </string-array>
+<string-array name="select_upload_dialog_items">
+        <item>拍照</item>
+        <item>本地相册</item>
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_base_item"
+    android:paddingBottom="@dimen/dp10"
+    android:paddingLeft="25.0dip"
+    android:paddingRight="25.0dip"
+    android:paddingTop="@dimen/dp10" >
+
+    <TextView
+        android:id="@id/tvSelectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@*android:color/black"
+        android:textSize="@dimen/sp16" />
+
+</RelativeLayout>

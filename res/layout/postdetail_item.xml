@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lyNDContent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/nd_content_padding"
+        android:paddingRight="@dimen/nd_content_padding"
+        android:paddingTop="@dimen/nd_content_padding" >
+
+        <ImageView
+            android:id="@+id/imgNDHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tvNDAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_toRightOf="@+id/imgNDHead"
+            android:textColor="@color/nd_author_txt"
+            android:textSize="@dimen/sp13" />
+
+        <RelativeLayout
+            android:id="@+id/rlNDAuthorFloor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp3"
+            android:layout_toRightOf="@+id/tvNDAuthor"
+            android:background="@drawable/shape_author_floor"
+            android:paddingLeft="@dimen/dp3"
+            android:paddingRight="@dimen/dp3"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/author_floor"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp11" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvNDDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNDAuthor"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_toRightOf="@+id/imgNDHead"
+            android:singleLine="true"
+            android:textColor="@color/textcolor_gray"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tvNDFloor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/note_detail_floor"
+            android:textSize="@dimen/sp14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding"
+        android:paddingLeft="@dimen/nd_content_padding"
+        android:paddingRight="@dimen/nd_content_padding"
+        android:paddingTop="@dimen/padding" >
+
+        <TextView
+            android:id="@+id/tvNDContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp17" />
+
+<!--         <RelativeLayout -->
+<!--             android:layout_width="fill_parent" -->
+<!--             android:layout_height="wrap_content" > -->
+
+<!--             <TextView -->
+<!--                 android:id="@+id/tvNDReport" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_alignParentLeft="true" -->
+<!--                 android:text="@string/report" -->
+<!--                 android:textColor="@color/nd_reply_txt" -->
+<!--                 android:textSize="@dimen/sp16" /> -->
+
+<!--             <Button -->
+<!--                 android:id="@+id/btnNDReply" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_alignParentRight="true" -->
+<!--                 android:layout_marginBottom="@dimen/nd_content_padding" -->
+<!--                 android:background="@drawable/selector_detail_reply" -->
+<!--                 android:paddingBottom="@dimen/dp2" -->
+<!--                 android:paddingLeft="@dimen/dp10" -->
+<!--                 android:paddingRight="@dimen/dp10" -->
+<!--                 android:paddingTop="@dimen/dp2" -->
+<!--                 android:text="@string/reply" -->
+<!--                 android:textColor="@color/nd_reply_txt" -->
+<!--                 android:textSize="@dimen/sp16" /> -->
+<!--         </RelativeLayout> -->
+    </LinearLayout>
+
+</LinearLayout>

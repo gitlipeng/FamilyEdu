@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/edit_person_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/ed_item_padding" >
+
+                <TextView
+                    style="@style/ed_title_tv"
+                    android:text="基本信息" />
+
+                <com.family.familyedu.widget.Category
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ed_item_padding"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="昵称" />
+
+                        <EditText
+                            android:id="@+id/etEPName"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="@string/sex" />
+
+                        <TextView
+                            android:id="@+id/tvEPSex"
+                            style="@style/ed_content_tv" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="@string/birthday" />
+
+                        <TextView
+                            android:id="@+id/tvEPBirthday"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="@string/age" />
+
+                        <EditText
+                            android:id="@+id/etEPAge"
+                            style="@style/ed_content_tv"
+                            android:background="@null"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="电话" />
+
+                        <EditText
+                            android:id="@+id/tvEPTel"
+                            style="@style/ed_content_tv"
+                            android:background="@null"
+                            android:inputType="phone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="地址" />
+
+                        <EditText
+                            android:id="@+id/tvEPAddress"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/ed_title_tv_blueicon"
+                            android:text="身份" />
+
+                        <TextView
+                            android:id="@+id/tvEPType"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+                </com.family.familyedu.widget.Category>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_teacher"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/ed_item_padding">
+
+                <TextView
+                    style="@style/ed_title_tv"
+                    android:text="家教信息" />
+
+                <com.family.familyedu.widget.Category
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ed_item_padding"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_redicon"
+                            android:text="学历" />
+
+                        <TextView
+                            android:id="@+id/tvEPLevel"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_redicon"
+                            android:text="擅长科目" />
+
+                        <TextView
+                            android:id="@+id/tvEPSilledClass"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_redicon"
+                            android:text="辅导年纪" />
+
+                        <EditText
+                            android:id="@+id/edtEPEduClass"
+                            style="@style/ed_content_tv"
+                            android:background="@null"
+                            android:maxLength="10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_base_item_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ed_item_padding" >
+
+                        <TextView
+                            style="@style/ed_title_tv_redicon"
+                            android:text="职业" />
+
+                        <EditText
+                            android:id="@+id/edtEPProfession"
+                            style="@style/ed_content_tv"
+                            android:background="@null" />
+                    </LinearLayout>
+                </com.family.familyedu.widget.Category>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnModifyPassword"
+                        style="@style/button_normal"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="修改密码" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        style="@style/button_normal_red"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="退出" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

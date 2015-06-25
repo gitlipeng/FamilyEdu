@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <ListView
+        android:id="@+id/lvPostDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/line_color"
+        android:dividerHeight="@dimen/line"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+      <LinearLayout
+        android:id="@+id/ryNoteDetailBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/nd_bottom_height"
+        android:background="@color/note_detail_bottom_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnNDReply"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/padding"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_weight="2.0"
+            android:background="@drawable/selector_nd_reply_btn"
+            android:text="@string/detail_reply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <LinearLayout
+            android:id="@+id/rlNDPage"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:orientation="horizontal" 
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/btnNDPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_note_detail_page"
+                android:paddingLeft="@dimen/padding"
+                android:src="@drawable/page_pre" />
+
+            <Button
+                android:id="@+id/btnNDJumpPage"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@color/note_detail_bottom_bg"
+                android:textColor="@color/nd_page_btn"
+                android:textSize="@dimen/sp16" />
+
+            <ImageButton
+                android:id="@+id/btnNDNext"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_note_detail_page"
+                android:src="@drawable/page_next" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

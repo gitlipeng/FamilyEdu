@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lyPostLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape_postposition_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding" >
+
+                <TextView
+                    android:id="@+id/tvClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="科目"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/sp18" />
+
+                <EditText
+                    android:id="@+id/edtPostTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/post_title"
+                    android:padding="@dimen/padding"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line"
+                android:contentDescription="@string/app_name" />
+
+            <EditText
+                android:id="@+id/edtPostContent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/post_content"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line"
+                android:contentDescription="@string/app_name" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp3"
+                android:background="@null"
+                android:drawableLeft="@drawable/icon_pin_blue"
+                android:drawablePadding="5dp"
+                android:hint="@string/post_address"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/edtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/icon_timer_blue"
+                    android:drawablePadding="5dp"
+                    android:hint="辅导时间"
+                    android:padding="@dimen/padding"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="时长"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="[小时]"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14" />
+
+                <EditText
+                    android:id="@+id/edtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/icon_money_blue"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="报酬"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="[元/小时]"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/line_color"
+        android:contentDescription="@string/app_name" />
+
+    <RadioGroup
+        android:id="@+id/rgBaseBottom"
+        style="@style/base_bottom_group"
+        android:layout_below="@+id/line"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/tabHomepage"
+            style="@style/base_bottom_item"
+            android:layout_marginLeft="0.0dip"
+            android:checked="true"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_item_homepage"
+            android:text="@string/homepage" />
+
+        <RadioButton
+            android:id="@+id/tabForum"
+            style="@style/base_bottom_item"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_item_forum"
+            android:text="@string/forum" />
+
+        <RadioButton
+            android:id="@+id/tabStreetmate"
+            style="@style/base_bottom_item"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_item_streetmate"
+            android:text="@string/streetmate" />
+
+        <RadioButton
+            android:id="@+id/tabMyHome"
+            style="@style/base_bottom_item"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_item_myhome"
+            android:text="@string/myhome" />
+    </RadioGroup>
+
+</RelativeLayout>

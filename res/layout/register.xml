@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/register_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/edittext_style"
+                android:drawablePadding="10dp"
+                android:hint="用户名"
+                android:maxLength="40" />
+
+            <EditText
+                android:id="@+id/pwd"
+                style="@style/edittext_style"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:maxLength="20" />
+
+            <EditText
+                android:id="@+id/confim_pwd"
+                style="@style/edittext_style"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:maxLength="20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/userType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/jiazhang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家长" />
+
+                    <RadioButton
+                        android:id="@+id/jiajiao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家教" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/button_normal"
+            android:layout_marginTop="20dp"
+            android:text="确认注册" 
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

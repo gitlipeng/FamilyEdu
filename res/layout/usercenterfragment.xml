@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.family.familyedu.widget.PullScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none"
+    android:overScrollMode="never"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/backimage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/usercenter_header_bg" />
+
+        <LinearLayout
+            android:id="@+id/usercenter_body"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/usercenter_myaccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent" >
+
+                <com.family.familyedu.widget.AvatarImageView
+                    android:id="@+id/uc_icon"
+                    android:layout_width="90.0dip"
+                    android:layout_height="90.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp15"
+                    android:background="@drawable/photo_default"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/arrow_nam"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@color/profile_name"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/arrow_nam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/arrow" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/ll_msg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/shape_base_item_normal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ed_item_padding_profile" >
+
+                    <TextView
+                        android:id="@+id/tv_xiaoxi"
+                        style="@style/ed_title_tv_profile"
+                        android:drawableLeft="@drawable/my_news"
+                        android:drawablePadding="@dimen/dp10"
+                        android:text="消息" />
+
+                    <TextView
+                        style="@style/ed_title_tv_profile"
+                        android:layout_toRightOf="@id/tv_xiaoxi"
+                        android:text="10"
+                        android:textColor="@color/prifle_count" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/profile_line"
+                    android:contentDescription="@string/app_name" />
+
+                <RelativeLayout
+                    android:id="@+id/usercenter_fabiaotiezi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/shape_base_item_normal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ed_item_padding_profile" >
+
+                    <TextView
+                        android:id="@+id/tv_fabiaotiezi"
+                        style="@style/ed_title_tv_profile"
+                        android:drawableLeft="@drawable/my_note"
+                        android:drawablePadding="@dimen/dp10"
+                        android:text="发表的职位" />
+
+                    <TextView
+                        style="@style/ed_title_tv_profile"
+                        android:layout_toRightOf="@id/tv_fabiaotiezi"
+                        android:text="10"
+                        android:textColor="@color/prifle_count" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/profile_line"
+                    android:contentDescription="@string/app_name" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/shape_base_item_normal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ed_item_padding_profile" >
+
+                    <TextView
+                        style="@style/ed_title_tv_profile"
+                        android:drawableLeft="@drawable/my_reply"
+                        android:drawablePadding="@dimen/dp10"
+                        android:text="发布的心得" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/profile_line"
+                    android:contentDescription="@string/app_name" />
+
+                <RelativeLayout
+                    android:id="@+id/about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/shape_base_item_normal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ed_item_padding_profile" >
+
+                    <TextView
+                        style="@style/ed_title_tv_profile"
+                        android:text="关于我们" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/profile_line"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.family.familyedu.widget.PullScrollView>

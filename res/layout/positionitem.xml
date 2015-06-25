@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp10" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/listitem_subject"
+        android:text="@string/loading" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/listitem_descrip"
+        android:text="@string/loading" />
+
+    <TextView
+        android:id="@+id/tv_class"
+        style="@style/listitem_subject"
+        android:text="@string/loading"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/dp14" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5" >
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_toLeftOf="@+id/tv_time"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+    </RelativeLayout>
+
+</LinearLayout>

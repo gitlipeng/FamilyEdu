@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp10" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/photo_default" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/icon_sex_man" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/listitem_descrip"
+                android:layout_marginLeft="5dp"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_red_bg"
+                android:padding="4dp"
+                android:text="@string/loading"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_profession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_red_bg"
+                android:padding="4dp"
+                android:text="@string/loading"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/listitem_subject"
+                android:layout_marginLeft="5dp"
+                android:text="@string/loading"
+                android:textColor="@color/title_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_pin_blue" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/listitem_subject"
+                android:layout_marginLeft="5dp"
+                android:text="@string/loading"
+                android:textColor="@color/textcolor_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_eduClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/loading"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/red_light_color" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_class_blue" />
+
+            <TextView
+                android:id="@+id/tv_skilledClass1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_time_bg"
+                android:padding="4dp"
+                android:text="@string/loading"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:id="@+id/tv_skilledClass2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_time_bg"
+                android:padding="4dp"
+                android:text="@string/loading"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:id="@+id/tv_skilledClass3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_time_bg"
+                android:padding="4dp"
+                android:text="@string/loading"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/dp14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivCall"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_call_green" />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/base_top_height"
+    android:background="@color/base_top_bg"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <ImageButton
+        android:id="@+id/btnBaseLeft"
+        style="@style/base_left_btn"
+        android:background="@drawable/selector_base_top_btn"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/txtBaseTitle"
+            style="@style/base_title_txt"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtBaseSubtitle"
+            style="@style/base_subtitle_txt"
+            android:layout_below="@+id/txtBaseTitle"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnBaseRight"
+        android:layout_width="@dimen/base_top_height"
+        android:layout_height="@dimen/base_top_height"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_base_top_btn"
+        android:padding="@dimen/dp5"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnBaseRightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/base_top_height"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_base_top_btn"
+        android:padding="@dimen/dp5"
+        android:textSize="@dimen/sp20"
+        android:visibility="gone" 
+        android:textColor="@color/white"/>
+
+    <ImageButton
+        android:id="@+id/btnBaseRight2"
+        android:layout_width="@dimen/base_top_height"
+        android:layout_height="@dimen/base_top_height"
+        android:layout_toLeftOf="@id/btnBaseRight"
+        android:background="@drawable/selector_base_top_btn"
+        android:padding="@dimen/dp5"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btnBaseRight3"
+        android:layout_width="@dimen/base_top_height"
+        android:layout_height="@dimen/base_top_height"
+        android:layout_toLeftOf="@id/btnBaseRight2"
+        android:background="@drawable/selector_base_top_btn"
+        android:padding="@dimen/dp5"
+        android:visibility="gone" />
+
+</RelativeLayout>

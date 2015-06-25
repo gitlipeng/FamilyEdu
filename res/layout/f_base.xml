@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_bg" >
+
+    <include
+        android:id="@+id/baseFragTop"
+        android:layout_alignParentTop="true"
+        layout="@layout/a_base_head" />
+
+    <RelativeLayout
+        android:id="@+id/baseFragMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/baseFragTop" >
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" 
+        android:visibility="gone"/>
+
+</RelativeLayout>
