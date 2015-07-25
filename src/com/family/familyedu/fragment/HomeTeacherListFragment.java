@@ -1,4 +1,4 @@
-ï»¿package com.family.familyedu.fragment;
+package com.family.familyedu.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,12 +43,12 @@ public class HomeTeacherListFragment extends BaseFragment implements
 	PullToRefreshListView mPullToRefreshView;
 	private ILoadingLayout loadingLayout;
 	ListView mMsgListView;
-	private static final int STATE_DISPLAY = -1;// åˆå§‹åŒ–åŠ è½½
-	private static final int STATE_REFRESH = 0;// ä¸‹æ‹‰åˆ·æ–°
-	private static final int STATE_MORE = 1;// åŠ è½½æ›´å¤š
+	private static final int STATE_DISPLAY = -1;// ³õÊ¼»¯¼ÓÔØ
+	private static final int STATE_REFRESH = 0;// ÏÂÀ­Ë¢ĞÂ
+	private static final int STATE_MORE = 1;// ¼ÓÔØ¸ü¶à
 
-	private int limit = 10; // æ¯é¡µçš„æ•°æ®æ˜¯10æ¡
-	private int curPage = 0; // å½“å‰é¡µçš„ç¼–å·ï¼Œä»0å¼€å§‹
+	private int limit = 10; // Ã¿Ò³µÄÊı¾İÊÇ10Ìõ
+	private int curPage = 0; // µ±Ç°Ò³µÄ±àºÅ£¬´Ó0¿ªÊ¼
 	private HomeTeacherAdapter adapter;
 
 	@Override
@@ -68,7 +68,7 @@ public class HomeTeacherListFragment extends BaseFragment implements
 	private void initView(LayoutInflater inflater) {
 		currentView = inflater.inflate(R.layout.parentfragment, null);
 		mainView.addView(this.currentView, mathLayoutParams);
-		setTitleText("å®¶æ•™");
+		setTitleText("¼Ò½Ì");
 		initListView();
 		queryData(0, STATE_DISPLAY);
 	}
@@ -84,7 +84,7 @@ public class HomeTeacherListFragment extends BaseFragment implements
 				.setRefreshingLabel(getString(R.string.pull_to_refresh_bottom_refreshing));
 		loadingLayout
 				.setReleaseLabel(getString(R.string.pull_to_refresh_bottom_release));
-		// //æ»‘åŠ¨ç›‘å¬
+		// //»¬¶¯¼àÌı
 		mPullToRefreshView.setOnScrollListener(new OnScrollListener() {
 
 			@Override
@@ -116,27 +116,27 @@ public class HomeTeacherListFragment extends BaseFragment implements
 			}
 		});
 
-		// ä¸‹æ‹‰åˆ·æ–°ç›‘å¬
+		// ÏÂÀ­Ë¢ĞÂ¼àÌı
 		mPullToRefreshView
 				.setOnRefreshListener(new OnRefreshListener2<ListView>() {
 
 					@Override
 					public void onPullDownToRefresh(
 							PullToRefreshBase<ListView> refreshView) {
-						// ä¸‹æ‹‰åˆ·æ–°(ä»ç¬¬ä¸€é¡µå¼€å§‹è£…è½½æ•°æ®)
+						// ÏÂÀ­Ë¢ĞÂ(´ÓµÚÒ»Ò³¿ªÊ¼×°ÔØÊı¾İ)
 						queryData(0, STATE_REFRESH);
 					}
 
 					@Override
 					public void onPullUpToRefresh(
 							PullToRefreshBase<ListView> refreshView) {
-						// ä¸Šæ‹‰åŠ è½½æ›´å¤š(åŠ è½½ä¸‹ä¸€é¡µæ•°æ®)
+						// ÉÏÀ­¼ÓÔØ¸ü¶à(¼ÓÔØÏÂÒ»Ò³Êı¾İ)
 						queryData(curPage, STATE_MORE);
 					}
 				});
 
 		mMsgListView = mPullToRefreshView.getRefreshableView();
-		// å†è®¾ç½®adapter
+		// ÔÙÉèÖÃadapter
 		adapter = new HomeTeacherAdapter(activity, positionList);
 		mMsgListView.setAdapter(adapter);
 		// mPullToRefreshView.setAdapter(adapter);
@@ -153,7 +153,7 @@ public class HomeTeacherListFragment extends BaseFragment implements
 	}
 
 	/**
-	 * è·å–èŒä½åˆ—è¡¨
+	 * »ñÈ¡Ö°Î»ÁĞ±í
 	 */
 	public void queryData(final int page, final int actionType) {
 		if (page == 0 && STATE_DISPLAY == actionType)
@@ -180,7 +180,7 @@ public class HomeTeacherListFragment extends BaseFragment implements
 								if (array != null && array.length() > 0) {
 									if (actionType == STATE_REFRESH
 											|| actionType == STATE_DISPLAY) {
-										// å½“æ˜¯ä¸‹æ‹‰åˆ·æ–°æ“ä½œæ—¶ï¼Œå°†å½“å‰é¡µçš„ç¼–å·é‡ç½®ä¸º0ï¼Œå¹¶æŠŠbankCardsæ¸…ç©ºï¼Œé‡æ–°æ·»åŠ 
+										// µ±ÊÇÏÂÀ­Ë¢ĞÂ²Ù×÷Ê±£¬½«µ±Ç°Ò³µÄ±àºÅÖØÖÃÎª0£¬²¢°ÑbankCardsÇå¿Õ£¬ÖØĞÂÌí¼Ó
 										curPage = 0;
 										positionList.clear();
 									}
@@ -194,13 +194,13 @@ public class HomeTeacherListFragment extends BaseFragment implements
 										positionList.add(bean);
 									}
 
-									// è¿™é‡Œåœ¨æ¯æ¬¡åŠ è½½å®Œæ•°æ®åï¼Œå°†å½“å‰é¡µç +1ï¼Œè¿™æ ·åœ¨ä¸Šæ‹‰åˆ·æ–°çš„onPullUpToRefreshæ–¹æ³•ä¸­å°±ä¸éœ€è¦æ“ä½œcurPageäº†
+									// ÕâÀïÔÚÃ¿´Î¼ÓÔØÍêÊı¾İºó£¬½«µ±Ç°Ò³Âë+1£¬ÕâÑùÔÚÉÏÀ­Ë¢ĞÂµÄonPullUpToRefresh·½·¨ÖĞ¾Í²»ĞèÒª²Ù×÷curPageÁË
 									curPage++;
 									adapter.notifyDataSetChanged();
 								} else if (actionType == STATE_MORE) {
-									Util.showLToast(activity, "æ²¡æœ‰æ›´å¤šæ•°æ®äº†");
+									Util.showLToast(activity, "Ã»ÓĞ¸ü¶àÊı¾İÁË");
 								} else if (actionType == STATE_REFRESH) {
-									Util.showLToast(activity, "æ²¡æœ‰æ•°æ®");
+									Util.showLToast(activity, "Ã»ÓĞÊı¾İ");
 								}
 								mPullToRefreshView.onRefreshComplete();
 							} catch (JSONException e) {
@@ -230,9 +230,9 @@ public class HomeTeacherListFragment extends BaseFragment implements
 		// Intent intent = new Intent(activity,PositionDetailActivity.class);
 		// intent.putExtra("UserBean", bean);
 		// startActivity(intent);
-		// è¿›å…¥èŠå¤©é¡µé¢
+		// ½øÈëÁÄÌìÒ³Ãæ
         if (Util.getUserInfo(activity) == null) {
-            // åˆ¤æ–­å¦‚æœæœªç™»å½•ï¼Œåˆ™è·³è½¬åˆ°ç™»å½•é¡µé¢
+            // ÅĞ¶ÏÈç¹ûÎ´µÇÂ¼£¬ÔòÌø×ªµ½µÇÂ¼Ò³Ãæ
             Intent intent = new Intent(activity, LoginActivity.class);
             startActivity(intent);
         }
