@@ -33,6 +33,7 @@ import cn.sharesdk.tencent.qq.QQ;
 import cn.sharesdk.tencent.qzone.QZone;
 import cn.sharesdk.wechat.moments.WechatMoments;
 
+import com.easemob.chat.EMChatManager;
 import com.family.familyedu.BaseApplication;
 import com.family.familyedu.R;
 import com.family.familyedu.bean.User;
@@ -226,6 +227,7 @@ public class Util {
 		BmobUser.logOut(context); // 清除缓存用户对象
 		BaseApplication.getInstance().logout(null);
 		savePassword("");// 将密码置空
+        EMChatManager.getInstance().logout();//此方法为同步方法
 	}
 
 	/**

@@ -20,6 +20,7 @@ import android.widget.ListView;
 import cn.bmob.v3.AsyncCustomEndpoints;
 import cn.bmob.v3.listener.CloudCodeListener;
 
+import com.family.familyedu.LoginActivity;
 import com.family.familyedu.MainActivity;
 import com.family.familyedu.R;
 import com.family.familyedu.adapter.HomeTeacherAdapter;
@@ -230,8 +231,15 @@ public class HomeTeacherListFragment extends BaseFragment implements
 		// intent.putExtra("UserBean", bean);
 		// startActivity(intent);
 		// 进入聊天页面
+        if (Util.getUserInfo(activity) == null) {
+            // 判断如果未登录，则跳转到登录页面
+            Intent intent = new Intent(activity, LoginActivity.class);
+            startActivity(intent);
+        }
+
+
 		Intent intent = new Intent(activity,ChatActivity.class);
-			intent.putExtra("userId", positionList.get(position - 1).getUsername());
+	    intent.putExtra("userId", positionList.get(position - 1).getUsername());
 		startActivity(intent);
 		
 	}

@@ -245,7 +245,7 @@ public class MainActivity extends BaseActivity implements
 		BaseTask task = new BaseTask(this);
 		task.getClassData();
 		task.getEduLevelData();
-		task.getCurrentVersion();
+//		task.getCurrentVersion();
 	}
 
 	boolean isExit;

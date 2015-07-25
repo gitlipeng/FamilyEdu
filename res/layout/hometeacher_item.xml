@@ -23,14 +23,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
 
             <ImageView
                 android:id="@+id/iv_sex"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginTop="3dp"
                 android:src="@drawable/icon_sex_man" />
 
             <TextView

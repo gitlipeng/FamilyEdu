@@ -222,8 +222,7 @@ public class LoginActivity extends BaseActivity implements Callback,
 			@Override
 			public void onSuccess() {
 				Util.savePassword(m_strPassword);// 记住密码
-				sendLoginReceiver();
-				loginHX(m_strUsername,m_strUsername);//登录环信
+				loginHX(m_strUsername, m_strUsername);//登录环信
 			}
 
 			@Override
@@ -237,7 +236,13 @@ public class LoginActivity extends BaseActivity implements Callback,
 		});
 	}
 
-	@Override
+    @Override
+    protected void loginSuccess() {
+        sendLoginReceiver();
+        finish();
+    }
+
+    @Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			// 不登录 ，直接返回
@@ -273,102 +278,6 @@ public class LoginActivity extends BaseActivity implements Callback,
 		}
 	}
 	
-	private void loginHX(final String name,final String password) {
-		EMChatManager.getInstance().login(name.toString(), password.toString(), new EMCallBack() {
 
-			@Override
-			public void onSuccess() {
-				// 登陆成功，保存用户名密码
-				BaseApplication.getInstance().setUserName(name.toString());
-				BaseApplication.getInstance().setPassword(password.toString());
-
-				try {
-					// ** 第一次登录或者之前logout后再登录，加载所有本地群和回话
-					// ** manually load all local groups and
-					// conversations in case we are auto login
-					EMGroupManager.getInstance().loadAllGroups();
-					EMChatManager.getInstance().loadAllConversations();
-					// 处理好友和群组
-					processContactsAndGroups();
-					// 此方法传入一个字符串String类型的参数，返回成功或失败的一个Boolean类型的返回值
-					EMChatManager.getInstance().updateCurrentUserNick(m_strUsername);
-					hideDialog();
-					LoginActivity.this.finish();
-				} catch (Exception e) {
-					e.printStackTrace();
-					// 取好友或者群聊失败，不让进入主页面
-					runOnUiThread(new Runnable() {
-						public void run() {
-							BaseApplication.getInstance().logout(null);
-						}
-					});
-					return;
-				}
-				// 更新当前用户的nickname 此方法的作用是在ios离线推送时能够显示用户nick
-				boolean updatenick = EMChatManager.getInstance()
-						.updateCurrentUserNick(
-								BaseApplication.currentUserNick.trim());
-				if (!updatenick) {
-					Log.e("LoginActivity", "update current user nick fail");
-				}
-			}
-
-			@Override
-			public void onProgress(int progress, String status) {
-			}
-
-			@Override
-			public void onError(final int code, final String message) {
-				runOnUiThread(new Runnable() {
-					public void run() {
-					}
-				});
-			}
-		});
-	}
-
-	private void processContactsAndGroups() throws EaseMobException {
-		// demo中简单的处理成每次登陆都去获取好友username，开发者自己根据情况而定
-		List<String> usernames = EMContactManager.getInstance()
-				.getContactUserNames();
-		EMLog.d("roster", "contacts size: " + usernames.size());
-		Map<String, User> userlist = new HashMap<String, User>();
-		for (String username : usernames) {
-			User user = new User();
-			user.setUsername(username);
-			userlist.put(username, user);
-		}
-		// 添加user"申请与通知"
-		User newFriends = new User();
-		newFriends.setUsername(Constant.NEW_FRIENDS_USERNAME);
-		String strChat = "Application_and_notify";
-		newFriends.setNick(strChat);
-
-		userlist.put(Constant.NEW_FRIENDS_USERNAME, newFriends);
-		// 添加"群聊"
-		User groupUser = new User();
-		String strGroup = "group_chat";
-		groupUser.setUsername(Constant.GROUP_USERNAME);
-		groupUser.setNick(strGroup);
-		groupUser.setHeader("");
-		userlist.put(Constant.GROUP_USERNAME, groupUser);
-
-		// 存入内存
-		BaseApplication.getInstance().setContactList(userlist);
-		System.out.println("----------------" + userlist.values().toString());
-		// 存入db
-		UserDao dao = new UserDao(this);
-		List<User> users = new ArrayList<User>(userlist.values());
-		dao.saveContactList(users);
-
-		// 获取黑名单列表
-		List<String> blackList = EMContactManager.getInstance()
-				.getBlackListUsernamesFromServer();
-		// 保存黑名单
-		EMContactManager.getInstance().saveBlackList(blackList);
-
-		// 获取群聊列表(群聊里只有groupid和groupname等简单信息，不包含members),sdk会把群组存入到内存和db中
-		EMGroupManager.getInstance().getGroupsFromServer();
-	}
 	
 }
