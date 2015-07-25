@@ -1,4 +1,4 @@
-package com.family.familyedu.fragment;
+﻿package com.family.familyedu.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -241,6 +241,6 @@ public class HomeTeacherListFragment extends BaseFragment implements
 		Intent intent = new Intent(activity,ChatActivity.class);
 	    intent.putExtra("userId", positionList.get(position - 1).getUsername());
 		startActivity(intent);
-		
+
 	}
 }
